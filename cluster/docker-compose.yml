@@ -18,7 +18,7 @@
 version: "3.8"
 services:
   prometheus:
-    image: "prom/prometheus:v2.54.0"
+    image: "prom/prometheus:v2.55.1"
     command:
       - "--storage.tsdb.path=/prometheus"
       - "--storage.tsdb.retention.time=120d"
@@ -31,7 +31,7 @@ services:
       - "prometheus-data:/prometheus"
     restart: always
   grafana:
-    image: "grafana/grafana:10.4.6"
+    image: "grafana/grafana:10.4.14"
     volumes:
       - "${CLUSTER_DEPLOY_ROOT}/grafana/grafana.ini:/etc/grafana/grafana.ini"
     ports:
@@ -95,7 +95,7 @@ services:
       - "${CLUSTER_DEPLOY_ROOT}/nginx/conf.d/grafana.conf:/etc/nginx/conf.d/grafana.conf"
     restart: always
   postgres:
-    image: postgres:16.4
+    image: postgres:16.6
     ports:
       - "5432:5432"
     environment:
@@ -114,7 +114,7 @@ services:
       - "${CLUSTER_DEPLOY_ROOT}/alertmanager:/etc/alertmanager"
     restart: always
   smtp:
-    image: ixdotai/smtp:v0.5.2
+    image: ixdotai/smtp:v0.7.0
     ports:
       - "2525:25"
     environment:
