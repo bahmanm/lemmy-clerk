@@ -1,10 +1,10 @@
-requires 'perl', '5.41.2' ;
+requires 'perl', '5.41.7' ;
 
-requires 'Mojolicious',            '9.37' ;
-requires 'Net::Prometheus',        '0.13' ;
+requires 'Mojolicious',            '9.39' ;
+requires 'Net::Prometheus',        '0.14' ;
 requires 'Data::Dump',             '1.25' ;
 requires 'Schedule::Cron::Events', '1.96' ;
-requires 'Text::CSV',              '2.04' ;
+requires 'Text::CSV',              '2.05' ;
 requires 'Moose',                  '2.2207' ;
 requires 'JSON',                   '4.10' ;
 requires 'JSON::Validator',        '5.14' ;
